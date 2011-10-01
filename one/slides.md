@@ -1,19 +1,20 @@
-!SLIDE
+<!SLIDE>
 
-Overview
-========
+Python/Django Deployment
+=================================
+
+<!SLIDE bullets>
 
 Luke Lee
---------
-    - Embedded C Developer
-    - Python/Django enthusiast
+========
+- Embedded C Developer
+- Python/Django enthusiast
 
-!SLIDE
-
+<!SLIDE bullets>
 .notes There are lots of deployment options, but I personally think they all
-.notes still have quirks and haven't found Utopia yet.  However, I want to
-.notes focus on arelatively new 'crop' of deployment options specific to
-.notes Python/Django apps.
+still have quirks and haven't found Utopia yet.  However, I want to
+focus on arelatively new 'crop' of deployment options specific to
+Python/Django apps.
 
 Deployment Options
 ==================
@@ -31,7 +32,7 @@ Deployment Options
     - Platform/API specific:
         - App Engine
 
-!SLIDE
+<!SLIDE bullets>
 
 Why Django/Python Specific Deployment
 =====================================
@@ -67,7 +68,7 @@ Downsides
   idea probably owes alot of its' roots to Heroku, which solved the deployment
   problem with Rails apps.
 
-!SLIDE
+<!SLIDE bullets>
 
 My Experiences
 ==============
@@ -75,7 +76,7 @@ My Experiences
     - Epio
     - App Engine
 
-!SLIDE
+<!SLIDE bullets>
 
 Links
 =====
@@ -88,7 +89,7 @@ Links
 
     - Showoff software = https://github.com/schacon/showoff
 
-!SLIDE
+<!SLIDE bullets>
 
 Todo
 ====
