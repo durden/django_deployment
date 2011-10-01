@@ -10,6 +10,15 @@ Luke Lee
 - Embedded C Developer
 - Python/Django enthusiast
 
+<!SLIDE bullets>
+
+Overview
+========
+- Different deployment strategies
+- Why specific Python/Django deployment
+- General 'flow' of deployment
+- My deployment experiences
+
 <!SLIDE bullets incremental>
 
 Deployment Options
@@ -74,8 +83,8 @@ things.
 
 <!SLIDE bullets incremental>
 
-Downsides
-=========
+Bad News
+========
 - Very new
 - Some don't offer pricing yet
 - Pricing can be complicated
@@ -89,12 +98,20 @@ deployment problem with Rails apps.
 
 <!SLIDE bullets>
 
+General deployment flow
+=======================
+- Create account
+- Download app/cli tool for deployment platform
+- Check out documentation
+- Commit all files (most/all deployed with vcs)
+
+<!SLIDE bullets>
+
 My Experiences
 ==============
 - Gondor
 - Epio
 - Heroku
-- App Engine
 
 <!SLIDE smaller>
 
@@ -107,12 +124,6 @@ Gondor
 
 Epio
 ====
-- Pricing based on pay per use (amount/hour)
-
-<!SLIDE smaller>
-
-App Engine
-==========
 - Pricing based on pay per use (amount/hour)
 
 <!SLIDE smaller>
@@ -167,8 +178,4 @@ Todo
   damn easy if it wasn't for this, and their UI is nice.
 - Use staticfiles or Django 1.3!!!
 - Maybe discuss deploying Django 1.2 vs. 1.3
-- Explain 'general' way of deployment:
-    - Download app/cli tool for deployment platform
-    - Check out its documentation
-    - Create account
-    - Commit all the files (this will bite you sometimes on gondor)
+
