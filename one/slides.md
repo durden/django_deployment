@@ -96,19 +96,20 @@ My Experiences
 - Heroku
 - App Engine
 
-<!SLIDE bullets>
+<!SLIDE smaller>
 
 Gondor
 ======
 - Pricing based on per instance (wsgi process/db/etc)
+- [install notes gist](https://gist.github.com/1028560)
 
-<!SLIDE bullets>
+<!SLIDE smaller>
 
 Epio
 ====
 - Pricing based on pay per use (amount/hour)
 
-<!SLIDE bullets>
+<!SLIDE smaller>
 
 App Engine
 ==========
@@ -145,16 +146,14 @@ Pygments
 Links
 =====
 - Code
-    - http://www.pinboard.in/u:durden/t:Django_deployment/
-    - https://gist.github.com/1028560
+    - [references](http://www.pinboard.in/u:durden/t:Django_deployment/)
+    - [presentation code](https://github.com/durden/django_deployment)
+    - [showoff](https://github.com/schacon/showoff)
 
 - Me
-    - @durden20
-    - http://github.com/durden
-    - http://www.lukelee.net
-
-- Showoff software
-    - https://github.com/schacon/showoff
+    - [@durden20](http://twitter.com/#!/durden20)
+    - [http://github.com/durden](http://github.com/durden)
+    - [http://www.lukelee.net](http://www.lukelee.net)
 
 <!SLIDE bullets>
 
