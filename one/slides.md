@@ -44,8 +44,8 @@ Django/Python specific
 ======================
 - Gondor (Django only)
 - Epio (Django/Flask/generic wsgi)
-- Django Zoom
 - Heroku (hybrid) (Rails/Django/Flask/etc.)
+- Django Zoom (Django only)
 - Dotcloud (too many to list)
 
 <!SLIDE bullets incremental>
@@ -93,6 +93,7 @@ My Experiences
 ==============
 - Gondor
 - Epio
+- Heroku
 - App Engine
 
 <!SLIDE bullets>
@@ -113,6 +114,31 @@ App Engine
 ==========
 - Pricing based on pay per use (amount/hour)
 
+<!SLIDE smaller>
+
+Heroku
+======
+- [codrspace](http://blooming-samurai-1554.herokuapp.com/)
+- [install notes](http://blooming-samurai-1554.herokuapp.com/durden/)
+- [gist](https://gist.github.com/1256423)
+
+<pre style='font-size:12pt'><code>
+diff --git a/requirements.txt b/requirements.txt
+index 4b39bab..deed5a4 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -3,4 +3,5 @@ django
+psycopg2==2.4.2
+Markdown==2.0.3
+Pygments
+<font color="red">
+--e git://github.com/kennethreitz/requests.git#egg=requests
+</font>
+<font color="green">
++requests
++#-e git://github.com/kennethreitz/requests.git#egg=requests
+</font>
+</pre></code>
 
 <!SLIDE smaller>
 
@@ -134,13 +160,13 @@ Links
 
 Todo
 ====
-- Go through all pinboard bookmarks and create a tag for Django deployment.
 - Take hello world app and deploy on epio/gondor/heroku
     - Take good notes
 - Look over notes from gondor deployment to make sure I can answer
     questions about it.
 - Add some info. about how to deal with static files.  Gondor was pretty
-    damn easy if it wasn't for this, and their UI is nice.
+  damn easy if it wasn't for this, and their UI is nice.
+- Use staticfiles or Django 1.3!!!
 - Maybe discuss deploying Django 1.2 vs. 1.3
 - Explain 'general' way of deployment:
     - Download app/cli tool for deployment platform
