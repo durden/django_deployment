@@ -10,99 +10,140 @@ Luke Lee
 - Embedded C Developer
 - Python/Django enthusiast
 
-<!SLIDE bullets>
-.notes There are lots of deployment options, but I personally think they all
-still have quirks and haven't found Utopia yet.  However, I want to
-focus on arelatively new 'crop' of deployment options specific to
-Python/Django apps.
+<!SLIDE bullets incremental>
 
 Deployment Options
 ==================
-    - Generic LAMP shared hosting
-        - Rackspace cloud
-        - Standard home LAMP
-        - Webfaction
-        - Amazon Web Services
-    - Django/Python specific:
-        - Gondor (Only django so far)
-        - Epio (Django/flask/generic wsgi)
-        - Django Zoom
-        - Heroku (hybrid) (rails/django/flask/etc.)
-        - Dotcloud (too many to list)
-    - Platform/API specific:
-        - App Engine
+- LAMP
+- Platform/API specific
+- Django/Python specific
 
-<!SLIDE bullets>
+.notes There are lots of deployment options, but I personally think they
+all still have quirks and haven't found Utopia yet.  However, I want to
+focus on a relatively new 'crop' of deployment options specific to
+Python/Django apps.
 
-Why Django/Python Specific Deployment
-=====================================
+<!SLIDE bullets incremental>
 
-- I'm not a system admin so the generic lamp hosting is too much of a pain.
-- App Engine is good, but afraid of being tied to Google.  However, the ease of
-  deployment is unparalled so far.
+LAMP Hosting
+===================
+- Rackspace cloud
+- Webfaction
+- Amazon Web Services
+- Homebrew LAMP
 
-Good news
----------
-    - Built by people who use django
-    - Know the pitfalls of deploying django
-    - Configure less/code more
-    - Ensure more 'standard' or 'rigid' deployment environment that is easily
-      duplicated and transferred to new projects.
-        - I'm not all that great at setting up environments, keeping up with
-          all the little changes/tweaks to Apache, etc.
-        - Essentially by limiting my choices to what works for 'most people'
-          keeps me from doing obviously stupid things.
+<!SLIDE bullets incremental>
+
+Platform/API specific
+=====================
+- App Engine
+
+<!SLIDE bullets incremental>
+
+Django/Python specific
+======================
+- Gondor (Django only)
+- Epio (Django/Flask/generic wsgi)
+- Django Zoom
+- Heroku (hybrid) (Rails/Django/Flask/etc.)
+- Dotcloud (too many to list)
+
+<!SLIDE bullets incremental>
+
+Why Specific Deployment
+=======================
+
+- Not a system admin
+- Concentrate on code
+- Avoid vendor lock-in
+
+<!SLIDE bullets incremental>
+
+Good News
+=========
+- Built by people who use Django
+- Understand pitfalls of deploying Django
+- Configure less/code more
+- Ensure more 'standard' or 'rigid' environment
+- Easily duplicated and transferred to new projects.
+
+.notes I'm not all that great at setting up environments, keeping up with
+all the little changes/tweaks to Apache, etc.  Essentially by limiting my
+choices to what works for 'most people' keeps me from doing obviously stupid
+things.
+
+<!SLIDE bullets incremental>
 
 Downsides
----------
-    - Typically tend to require a specific project layout and tends to be
-      pretty painful to deploy if project was already created.
-    - Very new services
-    - Some don't offer pricing yet
-    - Limited amount of features/services (maybe newest NoSQL missing, etc.)
-    - Pricing can be complicated:
-        - Gondor pricing based on per instance (wsgi process/db/etc)
-        - Epio pricing more like AWS or App Engine (amount/hour)
+=========
+- Very new
+- Some don't offer pricing yet
+- Pricing can be complicated
+- Require specific project layout
+- Painful to deploy existing projects
+- Limited amount of features/services
 
-- All the django hosting stuff is pretty new (within past 2 years).  The whole
-  idea probably owes alot of its' roots to Heroku, which solved the deployment
-  problem with Rails apps.
+.notes All the Django hosting stuff is pretty new (within past 2 years).
+The whole idea probably owes alot of its' roots to Heroku, which solved the
+deployment problem with Rails apps.
 
 <!SLIDE bullets>
 
 My Experiences
 ==============
-    - Gondor
-    - Epio
-    - App Engine
+- Gondor
+- Epio
+- App Engine
 
 <!SLIDE bullets>
 
+Gondor
+======
+- Pricing based on per instance (wsgi process/db/etc)
+
+<!SLIDE bullets>
+
+Epio
+====
+- Pricing based on pay per use (amount/hour)
+
+<!SLIDE bullets>
+
+App Engine
+==========
+- Pricing based on pay per use (amount/hour)
+
+
+<!SLIDE smaller>
+
 Links
 =====
-    - http://www.pinboard.in/u:durden/t:django_deployment/
+- Code
+    - http://www.pinboard.in/u:durden/t:Django_deployment/
     - https://gist.github.com/1028560
 
+- Me
     - @durden20
     - http://github.com/durden
     - http://www.lukelee.net
 
-    - Showoff software = https://github.com/schacon/showoff
+- Showoff software
+    - https://github.com/schacon/showoff
 
 <!SLIDE bullets>
 
 Todo
 ====
-    - Go through all pinboard bookmarks and create a tag for django deployment.
-    - Take hello world app and deploy on epio/gondor/heroku
-        - Take good notes
-    - Look over notes from gondor deployment to make sure I can answer
-      questions about it.
-    - Add some info. about how to deal with static files.  Gondor was pretty
-      damn easy if it wasn't for this, and their UI is nice.
-    - Maybe discuss deploying django 1.2 vs. 1.3
-    - Explain 'general' way of deployment:
-        - Download app/cli tool for deployment platform
-        - Check out its documentation
-        - Create account
-        - Commit all the files (this will bite you sometimes on gondor)
+- Go through all pinboard bookmarks and create a tag for Django deployment.
+- Take hello world app and deploy on epio/gondor/heroku
+    - Take good notes
+- Look over notes from gondor deployment to make sure I can answer
+    questions about it.
+- Add some info. about how to deal with static files.  Gondor was pretty
+    damn easy if it wasn't for this, and their UI is nice.
+- Maybe discuss deploying Django 1.2 vs. 1.3
+- Explain 'general' way of deployment:
+    - Download app/cli tool for deployment platform
+    - Check out its documentation
+    - Create account
+    - Commit all the files (this will bite you sometimes on gondor)
