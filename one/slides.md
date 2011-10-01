@@ -51,11 +51,11 @@ Platform/API specific
 
 Django/Python specific
 ======================
-- Gondor (Django only)
-- Epio (Django/Flask/generic wsgi)
-- Heroku (hybrid) (Rails/Django/Flask/etc.)
-- Django Zoom (Django only)
-- Dotcloud (too many to list)
+- Gondor
+- Epio
+- Heroku
+- Django Zoom
+- Dotcloud
 
 <!SLIDE bullets incremental>
 
@@ -96,13 +96,13 @@ Bad News
 The whole idea probably owes alot of its' roots to Heroku, which solved the
 deployment problem with Rails apps.
 
-<!SLIDE bullets>
+<!SLIDE bullets incremental>
 
 General deployment flow
 =======================
 - Create account
-- Download app/cli tool for deployment platform
-- Check out documentation
+- Download app/cli tool
+- Read documentation (syncdb/static files/shell)
 - Commit all files (most/all deployed with vcs)
 
 <!SLIDE bullets>
@@ -117,14 +117,41 @@ My Experiences
 
 Gondor
 ======
+- Python 2.7
+- Postgres
+- Allows 3rd party libraries (some C extensions)
+- Git/Hg
+- Django/Pinax
 - Pricing based on per instance (wsgi process/db/etc)
+- Redis caching
+
+<!SLIDE smaller>
+
+Gondor
+======
 - [install notes gist](https://gist.github.com/1028560)
 
 <!SLIDE smaller>
 
 Epio
 ====
+- Python 2.7
+- Postgres/Redis
+- Allows 3rd party libraries (some C extensions)
+- Git/Hg
+- Any wsgi app
 - Pricing based on pay per use (amount/hour)
+
+<!SLIDE bullets smaller>
+
+Heroku
+======
+- Python 2.7
+- Postgres
+- Allows 3rd party libraries (some C extensions)
+- Uses Cedar stack
+- Any Python framework
+- Git/svn
 
 <!SLIDE smaller>
 
@@ -173,9 +200,6 @@ Todo
 - Take hello world app and deploy on epio/gondor/heroku
     - Take good notes
 - Look over notes from gondor deployment to make sure I can answer
-    questions about it.
-- Add some info. about how to deal with static files.  Gondor was pretty
-  damn easy if it wasn't for this, and their UI is nice.
+  questions about it.
 - Use staticfiles or Django 1.3!!!
 - Maybe discuss deploying Django 1.2 vs. 1.3
-
