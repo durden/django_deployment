@@ -123,6 +123,7 @@ Epio
 - Allows 3rd party libraries (some C extensions)
 - Git/Hg
 - Any wsgi app
+- 1 instance/5GB BW/2GB DB
 - Pricing based on pay per use (amount/hour)
 
 <!SLIDE smaller>
@@ -165,6 +166,8 @@ Heroku
 - Uses Cedar stack
 - Any Python framework
 - Git/svn
+- Pricing based on per instance (wsgi process/db/etc)
+- 5MB database/750 dyno hours
 
 <!SLIDE smaller>
 
