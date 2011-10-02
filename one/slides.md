@@ -91,6 +91,7 @@ Bad News
 - Require specific project layout
 - Painful to deploy existing projects
 - Limited amount of features/services
+- Very different ways to handle settings.py/paths/etc.
 
 .notes All the Django hosting stuff is pretty new (within past 2 years).
 The whole idea probably owes alot of its' roots to Heroku, which solved the
@@ -109,9 +110,29 @@ General deployment flow
 
 My Experiences
 ==============
-- Gondor
 - Epio
+- Gondor
 - Heroku
+
+<!SLIDE smaller>
+
+Epio
+====
+- Python 2.7
+- Postgres/Redis
+- Allows 3rd party libraries (some C extensions)
+- Git/Hg
+- Any wsgi app
+- Pricing based on pay per use (amount/hour)
+
+<!SLIDE smaller>
+
+Epio
+====
+- Create production_settings.py
+- Create config file epio.ini
+- Reference production_settings.py in epio.ini
+- Override settings.py
 
 <!SLIDE smaller>
 
@@ -129,18 +150,10 @@ Gondor
 
 Gondor
 ======
+- Requires a bit more work
+- Forces modifications to sys.path
+- Creation of wsgi.py, modifications to settings.py
 - [install notes gist](https://gist.github.com/1028560)
-
-<!SLIDE smaller>
-
-Epio
-====
-- Python 2.7
-- Postgres/Redis
-- Allows 3rd party libraries (some C extensions)
-- Git/Hg
-- Any wsgi app
-- Pricing based on pay per use (amount/hour)
 
 <!SLIDE bullets smaller>
 
@@ -160,6 +173,7 @@ Heroku
 - [codrspace](http://blooming-samurai-1554.herokuapp.com/)
 - [install notes](http://blooming-samurai-1554.herokuapp.com/durden/)
 - [gist](https://gist.github.com/1256423)
+- Auto-injects code into your settings.py to avoid sys.path changes, etc.
 
 <pre style='font-size:12pt'><code>
 diff --git a/requirements.txt b/requirements.txt
@@ -181,6 +195,22 @@ Pygments
 
 <!SLIDE smaller>
 
+Tips/tricks
+===========
+- Use staticfiles or Django 1.3
+- Django 1.3 seems more popular/easy to deploy
+- Create branches to track different deployments for each project
+- How to store/track specific deployment settings for collaboration
+
+<!SLIDE smaller>
+Changelog
+=========
+- Epio
+- Gondor
+- Heroku
+
+<!SLIDE smaller>
+
 Links
 =====
 - Code
@@ -195,11 +225,12 @@ Links
 
 <!SLIDE bullets>
 
-Todo
-====
-- Take hello world app and deploy on epio/gondor/heroku
-    - Take good notes
-- Look over notes from gondor deployment to make sure I can answer
-  questions about it.
-- Use staticfiles or Django 1.3!!!
-- Maybe discuss deploying Django 1.2 vs. 1.3
+Extra Notes
+===========
+- Open up the following files for viewing in presentation:
+    - ~/Documents/code/web/frameworks/django/codrspace/production_settings.py
+    - ~/Documents/code/web/frameworks/django/codrspace/epio.ini
+    - ~/Documents/code/web/frameworks/django/gondor_deployments/blog/blog_template/.gondor/config
+    - Gists:
+        - [gondor](https://gist.github.com/1028560)
+        - [heroku](https://gist.github.com/1256423)
