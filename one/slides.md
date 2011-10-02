@@ -203,6 +203,7 @@ Tips/tricks
 - How to store/track specific deployment settings for collaboration
 
 <!SLIDE smaller>
+
 Changelog
 =========
 - Epio
