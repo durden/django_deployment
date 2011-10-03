@@ -210,8 +210,30 @@ Tips/tricks
 Changelog
 =========
 - Epio
+    - 12 commits
+    - Files changed:    18
+    - Insertions:       115
+    - Deletions:        26
+
 - Gondor
+    - 11 commits
+    - Files changed:    49
+    - Insertions:       1146
+    - Deletions:        12
+
+    - Files changed:    16
+    - Insertions:       130
+    - Deletions:        12
+
 - Heroku
+    - 7 commits
+    - Files changed:    107
+    - Insertions:       5219
+    - Deletions:        5217
+
+    - Files changed:    7
+    - Insertions:       8
+    - Deletions:        7
 
 <!SLIDE smaller>
 
