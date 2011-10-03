@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Django Deployment</title>
+
+  <meta name="viewport" content="width=device-width"/>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+  <script type="text/javascript" src="./js/coffee-script.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+      setupPreso(false, './');
+  });
+  </script>
+
+</head>
+
+<body>
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">z, ?</td><td>toggle help (this)</td></tr>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">shift-space, &larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>toggle debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c, t</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">n</td><td>toggle notes</td></tr>
+    <tr><td class="key">p</td><td>run preshow</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content" ref="one/slides/1">
+<h1>Python/Django Deployment</h1></div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/slides/2">
+<h1>Luke Lee</h1>
+
+<ul>
+<li>Embedded C Developer</li>
+<li>Python/Django enthusiast</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/slides/3">
+<h1>Overview</h1>
+
+<ul>
+<li>Different deployment strategies</li>
+<li>Why specific Python/Django deployment</li>
+<li>General 'flow' of deployment</li>
+<li>My deployment experiences</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="one/slides/4">
+<h1>Deployment Options</h1>
+
+<ul>
+<li>LAMP</li>
+<li>Platform/API specific</li>
+<li>Django/Python specific</li>
+</ul>
+
+
+<p class="notes">There are lots of deployment options, but I personally think they
+all still have quirks and haven't found Utopia yet.  However, I want to
+focus on a relatively new 'crop' of deployment options specific to
+Python/Django apps.</p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="one/slides/5">
+<h1>LAMP Hosting</h1>
+
+<ul>
+<li>Rackspace cloud</li>
+<li>Webfaction</li>
+<li>Amazon Web Services</li>
+<li>Homebrew LAMP</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="one/slides/6">
+<h1>Platform/API specific</h1>
+
+<ul>
+<li>App Engine</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="one/slides/7">
+<h1>Django/Python specific</h1>
+
+<ul>
+<li>Gondor</li>
+<li>Epio</li>
+<li>Heroku</li>
+<li>Django Zoom</li>
+<li>Dotcloud</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="one/slides/8">
+<h1>Why Specific Deployment</h1>
+
+<ul>
+<li>Not a system admin</li>
+<li>Concentrate on code</li>
+<li>Avoid vendor lock-in</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="one/slides/9">
+<h1>Good News</h1>
+
+<ul>
+<li>Built by people who use Django</li>
+<li>Understand pitfalls of deploying Django</li>
+<li>Configure less/code more</li>
+<li>Ensure more 'standard' or 'rigid' environment</li>
+<li>Easily duplicated and transferred to new projects.</li>
+</ul>
+
+
+<p class="notes">I'm not all that great at setting up environments, keeping up with
+all the little changes/tweaks to Apache, etc.  Essentially by limiting my
+choices to what works for 'most people' keeps me from doing obviously stupid
+things.</p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="one/slides/10">
+<h1>Bad News</h1>
+
+<ul>
+<li>Very new</li>
+<li>Some don't offer pricing yet</li>
+<li>Pricing can be complicated</li>
+<li>Require specific project layout</li>
+<li>Painful to deploy existing projects</li>
+<li>Limited amount of features/services</li>
+<li>Very different ways to handle settings.py/paths/etc.</li>
+</ul>
+
+
+<p class="notes">All the Django hosting stuff is pretty new (within past 2 years).
+The whole idea probably owes alot of its' roots to Heroku, which solved the
+deployment problem with Rails apps.</p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="one/slides/11">
+<h1>General deployment flow</h1>
+
+<ul>
+<li>Create account</li>
+<li>Download app/cli tool</li>
+<li>Read documentation (syncdb/static files/shell)</li>
+<li>Commit all files (most/all deployed with vcs)</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/slides/12">
+<h1>My Experiences</h1>
+
+<ul>
+<li>Epio</li>
+<li>Gondor</li>
+<li>Heroku</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/slides/13">
+<h1>Epio</h1>
+
+<ul>
+<li>Python 2.7</li>
+<li>Postgres/Redis</li>
+<li>Allows 3rd party libraries (some C extensions)</li>
+<li>Git/Hg</li>
+<li>Any wsgi app</li>
+<li>1 instance/5GB BW/2GB DB</li>
+<li>Pricing based on pay per use (amount/hour)</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/slides/14">
+<h1>Epio</h1>
+
+<ul>
+<li>Create production_settings.py</li>
+<li>Create config file epio.ini</li>
+<li>Reference production_settings.py in epio.ini</li>
+<li>Override settings.py</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/slides/15">
+<h1>Gondor</h1>
+
+<ul>
+<li>Python 2.7</li>
+<li>Postgres</li>
+<li>Allows 3rd party libraries (some C extensions)</li>
+<li>Git/Hg</li>
+<li>Django/Pinax</li>
+<li>Pricing based on per instance (wsgi process/db/etc)</li>
+<li>Redis caching</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/slides/16">
+<h1>Gondor</h1>
+
+<ul>
+<li>Requires a bit more work</li>
+<li>Forces modifications to sys.path</li>
+<li>Creation of wsgi.py, modifications to settings.py</li>
+<li><a href="https://gist.github.com/1028560">install notes gist</a></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets smaller" ref="one/slides/17">
+<h1>Heroku</h1>
+
+<ul>
+<li>Python 2.7</li>
+<li>Postgres</li>
+<li>Allows 3rd party libraries (some C extensions)</li>
+<li>Uses Cedar stack</li>
+<li>Any Python framework</li>
+<li>Git/svn</li>
+<li>Pricing based on per instance (wsgi process/db/etc)</li>
+<li>5MB database/750 dyno hours</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/slides/18">
+<h1>Heroku</h1>
+
+<ul>
+<li><a href="http://blooming-samurai-1554.herokuapp.com/">codrspace</a></li>
+<li><a href="http://blooming-samurai-1554.herokuapp.com/durden/">install notes</a></li>
+<li><a href="https://gist.github.com/1256423">gist</a></li>
+<li>Auto-injects code into your settings.py to avoid sys.path changes, etc.</li>
+</ul>
+
+
+<pre style="font-size:12pt"><code>
+diff --git a/requirements.txt b/requirements.txt
+index 4b39bab..deed5a4 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -3,4 +3,5 @@ django
+psycopg2==2.4.2
+Markdown==2.0.3
+Pygments
+<font color="red">
+--e git://github.com/kennethreitz/requests.git#egg=requests
+</font>
+<font color="green">
++requests
++#-e git://github.com/kennethreitz/requests.git#egg=requests
+</font>
+</code>
+
+
+<p/></pre></div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/slides/19">
+<h1>Tips/tricks</h1>
+
+<ul>
+<li>Use staticfiles or Django 1.3</li>
+<li>Django 1.3 seems more popular/easy to deploy</li>
+<li>Create branches to track different deployments for each project</li>
+<li>How to store/track specific deployment settings for collaboration</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/slides/20">
+<h1>Changelog</h1>
+
+<ul>
+<li>Epio</li>
+<li>Gondor</li>
+<li>Heroku</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="one/slides/21">
+<h1>Links</h1>
+
+<ul>
+<li><p>Code</p>
+
+<ul>
+<li><a href="http://www.pinboard.in/u:durden/t:Django_deployment/">references</a></li>
+<li><a href="https://github.com/durden/django_deployment">presentation code</a></li>
+<li><a href="https://github.com/schacon/showoff">showoff</a></li>
+</ul>
+</li>
+<li><p>Me</p>
+
+<ul>
+<li><a href="http://twitter.com/#!/durden20">@durden20</a></li>
+<li><a href="http://github.com/durden">http://github.com/durden</a></li>
+<li><a href="http://www.lukelee.net">http://www.lukelee.net</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="one/slides/22">
+<h1>Extra Notes</h1>
+
+<ul>
+<li>Open up the following files for viewing in presentation:
+
+<ul>
+<li>~/Documents/code/web/frameworks/django/codrspace/production_settings.py</li>
+<li>~/Documents/code/web/frameworks/django/codrspace/epio.ini</li>
+<li>~/Documents/code/web/frameworks/django/gondor<em>deployments/blog/blog</em>template/.gondor/config</li>
+<li>Gists:
+
+<ul>
+<li><a href="https://gist.github.com/1028560">gondor</a></li>
+<li><a href="https://gist.github.com/1256423">heroku</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div>
+
+</body>
+</html>
