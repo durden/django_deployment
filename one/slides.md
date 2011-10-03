@@ -3,6 +3,8 @@
 Python/Django Deployment
 =================================
 
+- [presentation](https://durden.github.com/django_deployment)
+
 <!SLIDE bullets>
 
 Luke Lee
@@ -156,7 +158,7 @@ Gondor
 - Creation of wsgi.py, modifications to settings.py
 - [install notes gist](https://gist.github.com/1028560)
 
-<!SLIDE bullets smaller>
+<!SLIDE smaller>
 
 Heroku
 ======
