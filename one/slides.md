@@ -1,9 +1,9 @@
-<!SLIDE>
+<!SLIDE bullets>
 
 Python/Django Deployment
-=================================
+========================
 
-- [presentation](https://durden.github.com/django_deployment)
+- [http://durden.github.com/django_deployment](http://durden.github.com/django_deployment)
 
 <!SLIDE bullets>
 
@@ -207,35 +207,57 @@ Tips/tricks
 - Create branches to track different deployments for each project
 - How to store/track specific deployment settings for collaboration
 
-<!SLIDE smaller>
+<!SLIDE>
 
 Changelog
 =========
-- Epio
-    - 12 commits
-    - Files changed:    18
-    - Insertions:       115
-    - Deletions:        26
-
-- Gondor
-    - 11 commits
-    - Files changed:    49
-    - Insertions:       1146
-    - Deletions:        12
-
-    - Files changed:    16
-    - Insertions:       130
-    - Deletions:        12
-
-- Heroku
-    - 7 commits
-    - Files changed:    107
-    - Insertions:       5219
-    - Deletions:        5217
-
-    - Files changed:    7
-    - Insertions:       8
-    - Deletions:        7
+<table style="margin-left: 20%; text-align: center;font-size: 130%; line-height: 150%;">
+    <thead>
+        <tr>
+            <th style="padding: 10px 8px;">Service</th>
+            <th style="padding: 10px 8px;">Commits</th>
+            <th style="padding: 10px 8px;">Files changed</th>
+            <th style="padding: 10px 8px;">Insertions</th>
+            <th style="padding: 10px 8px;">Deletions</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>Epio</td>
+        <td>12</td>
+        <td>18</td>
+        <td>115</td>
+        <td>26</td>
+    </tr>
+    <tr>
+    <tr>
+        <td>Gondor</td>
+        <td>11</td>
+        <td>49</td>
+        <td>1126</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Gondor</td>
+        <td>10</td>
+        <td>16</td>
+        <td>130</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Heroku</td>
+        <td>7</td>
+        <td>107</td>
+        <td>5219</td>
+        <td>5217</td>
+    </tr>
+    <tr>
+        <td>Heroku</td>
+        <td>9</td>
+        <td>7</td>
+        <td>8</td>
+        <td>7</td>
+    </tr>
+</table>
 
 <!SLIDE smaller>
 
