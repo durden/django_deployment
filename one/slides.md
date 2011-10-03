@@ -94,7 +94,7 @@ Bad News
 - Very different ways to handle settings.py/paths/etc.
 
 .notes All the Django hosting stuff is pretty new (within past 2 years).
-The whole idea probably owes alot of its' roots to Heroku, which solved the
+The whole idea probably owes a lot of its' roots to Heroku, which solved the
 deployment problem with Rails apps.
 
 <!SLIDE bullets incremental>
